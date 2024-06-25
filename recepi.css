@@ -1,5 +1,4 @@
-html
-{
+html {
     background-color: #ffdd86;
     /* background: linear-gradient(0deg, #ffdd87 0%, #ffdd87 80%,#3c150b 80%, #3c150b 100%) !important; */
 }
@@ -15,9 +14,7 @@ body {
 
 }
 
-main {
-    
-}
+main {}
 
 .page1 {
 
@@ -25,27 +22,48 @@ main {
     height: 100vh;
 
     .header {
-        
+
         width: 100vw;
         background-color: rgba(60, 21, 11, 1);
-        height: 180px;  
+        height: 180px;
     }
 
-    .font{
-        font-size: 35px;
-        font-family: "07";
-    
+    .title {
+
+        display: flex;
+        /* justify-content: center; */
+        margin-left: 100px;
+        margin-top: 60px;
+
+        .font {
+            letter-spacing: 15px;
+            margin-top: 20px;
+            font-size: 30px;
+            font-family: "07";
+        }
+
+        .komadori {
+            font-size: 35px;
+            font-family: "komadori";
+        }
+
+
     }
 
-    .komadori{
-        font-size: 35px;
-        font-family:"komadori";
+    .recepi {
+
+        display: flex;
+        justify-content: center;
+
+        .num{
+            font-size: 15px;
+            font-family: '07';
+        }
+
     }
-
-
 }
 
-.picture{
+.picture {
 
 
     height: 100vh;
@@ -54,34 +72,37 @@ main {
     justify-content: start;
     align-items: center;
 
-    .one{
+    .one {
 
         font-size: 60px;
         display: flex;
         margin: 50vh;
     }
-    img{
+
+    img {
         width: 400px;
         height: 500px;
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         margin: -7px;
-        border-radius: 50%; /* ここで角を丸める */
+        border-radius: 50%;
+        /* ここで角を丸める */
 
 
     }
-    .two{
+
+    .two {
         padding-left: 100px;
         font-size: 40px;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
 
 
     }
 }
 
-.page2{
+.page2 {
 
     width: 100vw;
     height: 100vh;
@@ -92,15 +113,19 @@ main {
     position: relative;
 
 
-    .container1, .container2 {
-        position: absolute; /* 子要素を絶対位置に設定 */
-        top: 50%; /* 上下中央に配置 */
-        left: 50%; /* 左右中央に配置 */
+    .container1,
+    .container2 {
+        position: absolute;
+        /* 子要素を絶対位置に設定 */
+        top: 50%;
+        /* 上下中央に配置 */
+        left: 50%;
+        /* 左右中央に配置 */
         transform: translate(-50%, -50%);
-        white-space: nowrap; 
+        white-space: nowrap;
     }
 
-    .container1{
+    .container1 {
         font-family: "komadori";
         letter-spacing: 10px;
         margin-left: -50px;
@@ -109,8 +134,8 @@ main {
 
 
     }
-    
-    .container2{
+
+    .container2 {
         font-size: 35px;
         font-family: "07";
         line-height: 3.4;
@@ -123,9 +148,9 @@ main {
 @font-face {
     font-family: "komadori";
     src: url("./font/komadori-mini.otf") format("truetype");
-}  
-@font-face{
-    font-family: "07";
-    src: url("./font/07にくまるフォント.otf") format("truetype");
 }
 
+@font-face {
+    font-family: "07";
+    src: url("./font/YDWaosagi.otf") format("truetype");
+}
