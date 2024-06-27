@@ -7,7 +7,7 @@ body {
 
     margin: 0px;
     color: #3c150b;
-
+    overflow-x: hidden;
     font-size: 75px;
     font-weight: 100px;
     font-family: 'komadori';
@@ -51,26 +51,34 @@ main {}
 
 .picture {
 
+    height: 400vh;
 
-    height: 100vh;
-    width: 100vw;
 
-    overflow-y: scroll;
 
-    .scroll {
+    .sticky_wrap {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
 
+    .horizontal_scroll {
+        position: absolute;
+        top: 0;
+        height: 100%;
         width: 400vw;
+        will-change: transform;
         display: flex;
-        justify-content: start;
-        align-items: center;
 
     }
 
     .one {
-
         font-size: 60px;
         display: flex;
-        margin: 50vh;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
     }
 
     img {
@@ -79,9 +87,6 @@ main {}
         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         margin: -7px;
         border-radius: 50%;
-        /* ここで角を丸める */
-
-
     }
 
     .two {
@@ -91,8 +96,6 @@ main {}
         justify-content: center;
         flex-direction: column;
         align-items: center;
-
-
     }
 }
 
