@@ -4,14 +4,11 @@ html {
 }
 
 body {
-
     margin: 0px;
     color: #3c150b;
-
     font-size: 75px;
     font-weight: 100px;
     font-family: 'komadori';
-
 }
 
 main {}
@@ -22,46 +19,60 @@ main {}
     height: 100vh;
 
     .header {
-
         width: 100vw;
         background-color: rgba(60, 21, 11, 1);
         height: 100px;
     }
 
     .title {
-
+        /* 
+        height: 140vh;
+        position: relative;
+        top: 0;
+        
+        animation: scroll-anim linear;
+        animation-timeline: scroll();
+        animation-range: entry 0% exit 9%;
+        transition: all 0.5s;
+ */
         width: 100vw;
         height: 100vh;
+        /* Adjust for header height */
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: -100px;
+        position: fixed;
+        top: 10px;
+        /* Adjust for header height */
+        left: 0;
+        transition: all 0.5s;
 
         .font {
             letter-spacing: 10px;
-            margin-top: -90px;
-            font-size: 40px;
+            font-size: 50px;
             font-family: "07";
+            transition: all 0.5s;
         }
 
         .komadori {
-            font-size: 35px;
+            font-size: 45px;
             font-family: "komadori";
             margin-left: 10px;
+            transition: all 0.5s;
+
         }
 
         img {
             margin-left: 30px;
             width: 250px;
+            transition: all 0.5s;
         }
-
-
     }
 }
 
 .picture2 {
 
-    height: 650vh;
+    height: 450vh;
 
     .sticky_wrap2 {
 
@@ -78,7 +89,7 @@ main {}
         position: absolute;
         /* top: 0; */
         height: 100%;
-        width: 650vw;
+        width: 450vw;
         will-change: transform;
         display: flex;
         font-size: 25px;
@@ -91,6 +102,16 @@ main {}
             align-items: center;
             display: flex;
             padding: 100px;
+
+            img {
+                align-items: center;
+                position: relative;
+                transform: rotate(0deg);
+            }
+        }
+
+        .shake-animation {
+            animation: shake 1.5s ease;
         }
 
         .a2 {
@@ -116,7 +137,7 @@ main {}
                         /* 傾きをスムーズに変えるためのトランジション */
 
                         transform: rotate(0deg);
-                        
+
                         /* 初期値 */
 
 
@@ -132,9 +153,10 @@ main {}
                 }
             }
         }
+
         .shake-animation {
-            animation: shake 1.0s ease;
-        
+            animation: shake 1.5s ease;
+
         }
 
         .a3 {
@@ -147,7 +169,7 @@ main {}
             .con ul {
                 margin-top: -30px;
                 margin-left: 30px;
-                
+
             }
         }
 
@@ -164,37 +186,70 @@ main {}
                 position: relative;
             }
         }
+
         .shake-animation {
-            animation: shake 1.0s ease;
-        
+            animation: shake 1.5s ease;
+
         }
-    }
 
-    .a5 {
-        display: flex;
-        height: 90vh;
-        width: 45vw;
-        flex-direction: column;
-        align-items: center;
-        padding: 100px;
-    }
 
-    .a6 {
-        display: flex;
-        height: 90vh;
-        width: 40vw;
-        flex-direction: column;
-        align-items: center;
-        padding: 100px;
-    }
+        .a5 {
+            display: flex;
+            height: 90vh;
+            width: 45vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
 
-    .a7 {
-        display: flex;
-        height: 90vh;
-        width: 47vw;
-        flex-direction: column;
-        align-items: center;
-        padding: 100px;
+            img {
+                align-items: center;
+                position: relative;
+                transform: rotate(0deg);
+            }
+        }
+
+        .shake-animation {
+            animation: shake 1.5s ease;
+        }
+
+        .a6 {
+            display: flex;
+            height: 90vh;
+            width: 40vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+
+            img {
+                align-items: center;
+                position: relative;
+                transform: rotate(0deg);
+            }
+        }
+
+        .shake-animation {
+            animation: shake 1.5s ease;
+        }
+
+        .a7 {
+            display: flex;
+            height: 90vh;
+            width: 35vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+            line-height: 1.1;
+
+            img {
+                align-items: center;
+                position: relative;
+                transform: rotate(0deg);
+            }
+        }
+
+        .shake-animation {
+            animation: shake 1.5s ease;
+        }
     }
 
     img {
@@ -203,7 +258,7 @@ main {}
         padding: 0px 0px;
         border-radius: 10px;
         outline: 10px solid #3c150b;
-        
+
         margin: 40px;
         display: flex;
         align-items: center;
@@ -214,132 +269,30 @@ main {}
 
 .picture {
 
-    height: 320vh;
-
-
-
-    .sticky_wrap {
-        overflow: hidden;
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
-
-    .horizontal_scroll {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 320vw;
-        will-change: transform;
-        display: flex;
-
-    }
-
-    .one {
+    .dake {
         font-size: 60px;
         display: flex;
         height: 100vh;
         width: 100vw;
         justify-content: center;
         align-items: center;
-    }
-
-    .pic {
-        margin: auto 0px;
-    }
-
-    img {
-        width: 400px;
-        height: 500px;
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-        margin: -7px;
-        border-radius: 50%;
-    }
-
-    .two {
-        padding-left: 100px;
-        font-size: 40px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-
-
-}
-
-.kasane {
-    margin-top: -100vh;
-    height: 150vh;
-
-    .three {
-
-        width: 100vw;
-        height: 100vh;
-        position: sticky;
-        top: 0px;
-        left: 0px;
-        font-size: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-family: "komadori";
         text-align: center;
-    }
-}
+        flex-direction: column;
 
-
-.page2 {
-
-    width: 100vw;
-    height: 700vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -600vh;
-    position: relative;
-
-    .speech {
-        top: 0;
-        position: sticky;
-        width: 100vw;
-        height: 100vh;
-
-
-        .container1,
-        .container2 {
-
-
-            position: absolute;
-            /* 子要素を絶対位置に設定 */
-            top: 50%;
-            /* 上下中央に配置 */
-            left: 50%;
-            /* 左右中央に配置 */
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-        }
-
-
-
-        .container1 {
-            font-family: "komadori";
-            letter-spacing: 10px;
-            margin-left: -50px;
-            font-size: 47px;
-            line-height: 2.6;
-        }
-
-        .container2 {
-            font-size: 35px;
+        .dayo {
             font-family: "07";
-            line-height: 3.4;
-            top: 43%;
-            left: 35%;
+            font-size: 30px;
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            margin-top: -70px;
         }
     }
+
+
 }
+
 
 .button {
     height: 50vh;
@@ -370,17 +323,7 @@ main {}
         font-family: "komadori";
         font-size: 15px;
     }
-
-    /* .tayo {
-        width: 200px;
-        position: absolute;
-        bottom: 0;
- 
-    } */
 }
-
-
-
 
 @font-face {
     font-family: "komadori";
@@ -394,35 +337,37 @@ main {}
 
 @keyframes scroll-anim {
     from {
-        opacity: 0;
-        scale: 0.9;
+        opacity: 0.2;
+        transform: scale(0.4);
     }
 
     to {
         opacity: 1;
-        scale: 1;
+        transform: scale(1.2);
     }
 }
 
 @keyframes shake {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(22deg);
     }
+
     15% {
-        transform: rotate(-20deg);
+        transform: rotate(-12deg);
     }
-    25%{
-        transform: rotate(15deg);
+
+    30% {
+        transform: rotate(9deg);
     }
-    50% {
-        transform: rotate(-10deg);
+
+    45% {
+        transform: rotate(-8deg);
     }
-    70%{
+
+    65% {
         transform: rotate(5deg);
     }
-    85% {
-        transform: rotate(-2deg);
-    }
+
     100% {
         transform: rotate(0deg);
     }
