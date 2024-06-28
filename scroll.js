@@ -1,12 +1,6 @@
 
 const stickySections = [...document.querySelectorAll('.sticky_wrap')]
 
-
-
-
-
-
-
 window.addEventListener('scroll', (e) => {
   for (let i = 0; i < stickySections.length; i++) {
     transform(stickySections[i])

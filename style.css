@@ -21,9 +21,8 @@ main {}
     width: 100vw;
     height: 100vh;
 
-    .header {
+    .header{
         z-index: 100;
-
         width: 100vw;
         background-color: rgba(60, 21, 11, 1);
         height: 180px;
@@ -53,9 +52,7 @@ main {}
 
     height: 320vh;
 
-
-
-    .sticky_wrap {
+    .sticky_wrap{
         overflow: hidden;
         position: sticky;
         top: 0;
@@ -144,9 +141,11 @@ main {}
         height: 100vh;
 
 
-        .container1,
-        .container2 {
+        .container1 {
 
+
+            animation: scroll-anim linear;
+            animation-timeline: scroll();
 
             position: absolute;
             /* 子要素を絶対位置に設定 */
@@ -156,33 +155,28 @@ main {}
             /* 左右中央に配置 */
             transform: translate(-50%, -50%);
             white-space: nowrap;
-        }
-
-
-
-        .container1 {
-            font-family: "komadori";
+            font-family:"komadori";
             letter-spacing: 10px;
             margin-left: -50px;
             font-size: 47px;
             line-height: 2.6;
-
-
         }
 
-        .container2 {
-            font-size: 35px;
+
+        span {
+
+            font-size: 55px;
             font-family: "07";
-            line-height: 3.4;
-            top: 43%;
-            left: 35%;
+            line-height: 2.2;
+            margin: -70px 0;
+            display: flex;
+            padding-left: 180px;
 
         }
     }
 }
 
-.button {
-
+.button{
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -190,22 +184,16 @@ main {}
     img {
         width: 170px;
         margin: -7px;
-        border-radius: 50%;
-        /* ここで角を丸める */
+        border-radius:50%;
     }
 
-    align-items: center;
-
+    align-items:center;
     position: relative;
-
 
     .button {
         position: absolute;
-        /* 子要素を絶対位置に設定 */
         top: 50%;
-        /* 上下中央に配置 */
         left: 50%;
-        /* 左右中央に配置 */
         transform: translate(-50%, -50%);
         white-space: nowrap;
     }
@@ -237,4 +225,14 @@ main {}
 @font-face {
     font-family: "07";
     src: url("./font/YDWaosagi.otf") format("truetype");
+}
+
+@keyframes scroll-anim {
+    from {
+        scale: 0 1;
+    }
+
+    to {
+        scale: 1 1;
+    }
 }

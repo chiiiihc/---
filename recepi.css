@@ -30,59 +30,222 @@ main {}
 
     .title {
 
+        width: 100vw;
+        height: 100vh;
         display: flex;
-        /* justify-content: center; */
-        margin-left: 100px;
-        margin-top: 60px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -100px;
 
         .font {
-            letter-spacing: 15px;
-            margin-top: 20px;
-            font-size: 30px;
+            letter-spacing: 10px;
+            margin-top: -90px;
+            font-size: 40px;
             font-family: "07";
         }
 
         .komadori {
             font-size: 35px;
             font-family: "komadori";
+            margin-left: 10px;
         }
 
-        img{
+        img {
             margin-left: 30px;
             width: 250px;
         }
 
 
     }
+}
 
-    .recepi {
+.picture2 {
 
+    height: 650vh;
+
+    .sticky_wrap2 {
+
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        font-size: 25px;
+        font-family: '07';
+        line-height: 2.6;
+    }
+
+    .horizontal_scroll2 {
+        position: absolute;
+        /* top: 0; */
+        height: 100%;
+        width: 650vw;
+        will-change: transform;
         display: flex;
-        justify-content: center;
+        font-size: 25px;
+        margin: auto;
 
-        .num{
-            margin-right: 25vw;
-            font-size: 25px;
-            font-family: '07';
-            line-height: 2.6;
+        .a1 {
+            height: 90vh;
+            width: 50vw;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            padding: 100px;
         }
 
+        .a2 {
+            height: 90vh;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+
+            .yaya {
+                width: 100%;
+
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .content img {
+                        margin-right: 20px;
+                        /* Adjust the margin as needed */
+                        transition: transform 3.5s;
+                        /* 傾きをスムーズに変えるためのトランジション */
+
+                        transform: rotate(0deg);
+                        
+                        /* 初期値 */
+
+
+                    }
+
+                    .content ul {
+                        display: flex;
+                        flex-direction: column;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .shake-animation {
+            animation: shake 1.0s ease;
+        
+        }
+
+        .a3 {
+            height: 90vh;
+            width: 40vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+
+            .con ul {
+                margin-top: -30px;
+                margin-left: 30px;
+                
+            }
+        }
+
+        .a4 {
+            height: 90vh;
+            width: 40vw;
+            flex-direction: column;
+            align-items: center;
+            padding: 100px;
+            display: flex;
+
+            img {
+                align-items: center;
+                position: relative;
+            }
+        }
+        .shake-animation {
+            animation: shake 1.0s ease;
+        
+        }
+    }
+
+    .a5 {
+        display: flex;
+        height: 90vh;
+        width: 45vw;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px;
+    }
+
+    .a6 {
+        display: flex;
+        height: 90vh;
+        width: 40vw;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px;
+    }
+
+    .a7 {
+        display: flex;
+        height: 90vh;
+        width: 47vw;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px;
+    }
+
+    img {
+        width: 300px;
+        height: 360px;
+        padding: 0px 0px;
+        border-radius: 10px;
+        outline: 10px solid #3c150b;
+        
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
     }
 }
 
+
 .picture {
 
+    height: 320vh;
 
-    height: 100vh;
-    width: 400vh;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+
+
+    .sticky_wrap {
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .horizontal_scroll {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 320vw;
+        will-change: transform;
+        display: flex;
+
+    }
 
     .one {
         font-size: 60px;
         display: flex;
-        margin: 50vh;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pic {
+        margin: auto 0px;
     }
 
     img {
@@ -101,50 +264,123 @@ main {}
         flex-direction: column;
         align-items: center;
     }
+
+
+
+
 }
+
+.kasane {
+    margin-top: -100vh;
+    height: 150vh;
+
+    .three {
+
+        width: 100vw;
+        height: 100vh;
+        position: sticky;
+        top: 0px;
+        left: 0px;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 
 .page2 {
 
     width: 100vw;
-    height: 100vh;
+    height: 700vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: -600vh;
     position: relative;
 
+    .speech {
+        top: 0;
+        position: sticky;
+        width: 100vw;
+        height: 100vh;
 
-    .container1,
-    .container2 {
+
+        .container1,
+        .container2 {
+
+
+            position: absolute;
+            /* 子要素を絶対位置に設定 */
+            top: 50%;
+            /* 上下中央に配置 */
+            left: 50%;
+            /* 左右中央に配置 */
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
+
+
+
+        .container1 {
+            font-family: "komadori";
+            letter-spacing: 10px;
+            margin-left: -50px;
+            font-size: 47px;
+            line-height: 2.6;
+        }
+
+        .container2 {
+            font-size: 35px;
+            font-family: "07";
+            line-height: 3.4;
+            top: 43%;
+            left: 35%;
+        }
+    }
+}
+
+.button {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 170px;
+        margin: -7px;
+        border-radius: 50%;
+    }
+
+    align-items: center;
+    position: relative;
+
+    .button {
         position: absolute;
-        /* 子要素を絶対位置に設定 */
         top: 50%;
-        /* 上下中央に配置 */
         left: 50%;
-        /* 左右中央に配置 */
         transform: translate(-50%, -50%);
         white-space: nowrap;
     }
 
-    .container1 {
+    .comment {
+        padding-top: 270px;
+
+
         font-family: "komadori";
-        letter-spacing: 10px;
-        margin-left: -50px;
-        font-size: 47px;
-        line-height: 2.6;
-
-
+        font-size: 15px;
     }
 
-    .container2 {
-        font-size: 35px;
-        font-family: "07";
-        line-height: 3.4;
-        top: 43%;
-        left: 35%;
-
-    }
+    /* .tayo {
+        width: 200px;
+        position: absolute;
+        bottom: 0;
+ 
+    } */
 }
+
+
+
 
 @font-face {
     font-family: "komadori";
@@ -154,4 +390,40 @@ main {}
 @font-face {
     font-family: "07";
     src: url("./font/YDWaosagi.otf") format("truetype");
+}
+
+@keyframes scroll-anim {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-20deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    70%{
+        transform: rotate(5deg);
+    }
+    85% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
