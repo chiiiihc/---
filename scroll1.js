@@ -6,13 +6,13 @@ window.addEventListener('scroll', (e) => {
         transform(stickySections[i]);
     }
 
-    const element = document.querySelector(".speech");
+    const element = document.querySelector(".picture");
     const scrollY = window.scrollY;
-    if (3300 < scrollY) {
-        const a = scrollY - 3300;
+    if (4000 < scrollY) {
+        const a = scrollY - 4000;
         element.style.opacity = 0;
         if (a > 0) {
-            element.style.opacity += a * 0.003;
+            element.style.opacity += a * 0.2;
         }
     } else {
         element.style.opacity = 0;
@@ -214,35 +214,25 @@ window.addEventListener('scroll', function () {
     lastScrollY = scrollY;
 });
 
-// document.addEventListener('scroll', function () {
-//     const title = document.querySelector('.title');
-//     const font = document.querySelector('.font');
-//     const komadori = document.querySelector('.komadori');
-//     const img = document.querySelector('.katame img');
+let lastScrollY0 = window.scrollY;
+window.addEventListener('scroll', function () {
+    var element = document.getElementById('animateElement1');
+    var elementRect = element.getBoundingClientRect();
+    var elementTop = elementRect.top + window.scrollY;
+    var elementHeight = elementRect.height;
+    var windowHeight = window.innerHeight;
 
-//     // Calculate scroll position
-//     const scrollPosition = window.scrollY;
-//     const windowHeight = window.innerHeight;
-//     const documentHeight = document.body.scrollHeight;
+    element.style.opacity = 1
 
-//     // Determine the percentage of the page scrolled
-//     const scrollPercent = (scrollPosition / (documentHeight - windowHeight)) * 100;
+    if (window.scrollY <= 600) {
+        element.classList.add('shake-animation');
+        element.style.opacity = 1 + scrollY * 0.003;
+        } else {
+        element.classList.remove('shake-animation');
+    }
+    lastScrollY0 = scrollY;
+});
 
-//     // Update the styles based on scroll position
-
-//     if (window.scrollY >= 800) {
-//         title.style.top = 0;
-//         title.style.opacity = 0.1;
-//     } else if (windowHeight <= 800) {
-//         title.style.top = 100;
-//     }else {
-//         title.style.opacity = 1 - scrollPercent / 100;
-//         title.style.top = 0;
-//     }
-//     font.style.transform = `scale(${1 - scrollPercent / 100 + 0.3})`;
-//     komadori.style.transform = `scale(${1 - scrollPercent / 100 + 0.3})`;
-//     img.style.transform = `scale(${1 - scrollPercent / 100 + 0.3})`;
-// });
 document.addEventListener('DOMContentLoaded', () => {
     const page1Sections = [...document.querySelectorAll('.page1')];
     const element = document.querySelector(".title");
@@ -268,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (element.style.opacity < 0.6) {
                 element.style.opacity = 0.6;
                 element.style.transform = `scale(0.5)`;
-                element.style.transform =`translateY(${Math.max(-350,-a * 0.9)}px) scale(${Math.max(0.7, 1 - a * 0.001)})`;
+                element.style.transform = `translateY(${Math.max(-350, -a * 0.9)}px) scale(${Math.max(0.7, 1 - a * 0.001)})`;
 
 
             }

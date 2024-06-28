@@ -205,16 +205,31 @@ main {}
         font-family: "komadori";
         font-size: 15px;
     }
-
-    /* .tayo {
-        width: 200px;
-        position: absolute;
-        bottom: 0;
- 
-    } */
 }
 
+.progressbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: #3c150b;
+    border-radius: 60px;
+    /* outline: 10px solid #3c150b; */
+    animation: progressbar linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+}
 
+@keyframes progressbar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
 
 
 @font-face {

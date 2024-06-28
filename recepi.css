@@ -66,7 +66,11 @@ main {}
             margin-left: 30px;
             width: 250px;
             transition: all 0.5s;
+            position: relative;
         }
+    }
+    .shake-animation {
+        animation: shake 1.5s ease;
     }
 }
 
@@ -272,13 +276,18 @@ main {}
     .dake {
         font-size: 60px;
         display: flex;
-        height: 100vh;
+        /* height: 100vh; */
         width: 100vw;
         justify-content: center;
         align-items: center;
         font-family: "komadori";
         text-align: center;
         flex-direction: column;
+
+        
+        animation: scroll-anim0 linear;
+        animation-timeline: scroll();
+        /* animation-range: entry 0% cover 100%; */
 
         .dayo {
             font-family: "07";
@@ -322,6 +331,30 @@ main {}
 
         font-family: "komadori";
         font-size: 15px;
+    }
+}
+
+.progressbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 10px;
+    background-color: #3c150b;
+    border-radius: 60px;
+    /* outline: 10px solid #3c150b; */
+    animation: progressbar linear both;
+    animation-timeline: scroll();
+    animation-range: entry 0% cover 100%;
+}
+
+@keyframes progressbar {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
     }
 }
 
@@ -370,5 +403,15 @@ main {}
 
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes scroll-anim0 {
+    from {
+        scale: 0 1;
+    }
+
+    to {
+        scale: 1 1;
     }
 }
