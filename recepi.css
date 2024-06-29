@@ -69,6 +69,7 @@ main {}
             position: relative;
         }
     }
+
     .shake-animation {
         animation: shake 1.5s ease;
     }
@@ -284,7 +285,7 @@ main {}
         text-align: center;
         flex-direction: column;
 
-        
+
         animation: scroll-anim0 linear;
         animation-timeline: scroll();
         /* animation-range: entry 0% cover 100%; */
@@ -312,6 +313,8 @@ main {}
         width: 170px;
         margin: -7px;
         border-radius: 50%;
+        animation: poyopoyo 2s ease-out infinite;
+        opacity: 1;
     }
 
     align-items: center;
@@ -327,8 +330,6 @@ main {}
 
     .comment {
         padding-top: 270px;
-
-
         font-family: "komadori";
         font-size: 15px;
     }
@@ -408,10 +409,40 @@ main {}
 
 @keyframes scroll-anim0 {
     from {
-        scale: 0 1;
+        scale: 0 0;
+        opacity: 0;
     }
 
     to {
         scale: 1 1;
+        opacity: 1;
     }
+}
+
+@keyframes poyopoyo {
+
+    0%, 40% {
+        transform: skew(0deg, 0deg);
+      }
+      5% {
+        transform: skew(5deg, 5deg);
+      }
+      10% {
+        transform: skew(-4deg, -4deg);
+      }
+      15% {
+        transform: skew(3deg, 3deg);
+      }
+      20% {
+        transform: skew(-2deg, -2deg);
+      }
+      25% {
+        transform: skew(1deg, 1deg);
+      }
+      30% {
+        transform: skew(-0.6deg, -0.6deg);
+      }
+      35% {
+        transform: skew(0.3deg, 0.3deg);
+      }
 }

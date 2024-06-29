@@ -12,7 +12,7 @@ window.addEventListener('scroll', (e) => {
         const a = scrollY - 4000;
         element.style.opacity = 0;
         if (a > 0) {
-            element.style.opacity += a * 0.2;
+            element.style.opacity += a * 0.003;
         }
     } else {
         element.style.opacity = 0;
@@ -255,8 +255,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (scrollY > 700 && scrollY < 3900) {
             const a = scrollY - 500;
             element.style.opacity = 1 - a * 0.003;
-            if (element.style.opacity < 0.6) {
-                element.style.opacity = 0.6;
+            if (element.style.opacity < 0.7) {
+                element.style.opacity = 0.7;
                 element.style.transform = `scale(0.5)`;
                 element.style.transform = `translateY(${Math.max(-350, -a * 0.9)}px) scale(${Math.max(0.7, 1 - a * 0.001)})`;
 

@@ -21,6 +21,25 @@ window.addEventListener('scroll', (e) => {
   }
 })
 
+window.addEventListener('scroll', (e) => {
+  for (let i = 0; i < stickySections.length; i++) {
+    transform(stickySections[i])
+  }
+
+  const element = document.querySelector(".one");
+  const scrollY = window.scrollY;
+  if (550 < scrollY) {
+
+    const a = scrollY - 550
+    element.style.opacity = 0;
+    if (a > 0) {
+      element.style.opacity += a * 0.003
+    }
+  } else {
+    element.style.opacity = 0
+  }
+})
+
 function transform(section) {
 
   const offsetTop = section.parentElement.offsetTop;

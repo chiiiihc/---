@@ -76,6 +76,9 @@ main {}
         width: 100vw;
         justify-content: center;
         align-items: center;
+
+        animation: scroll-anim linear;
+        animation-timeline: scroll();
     }
 
     .pic {

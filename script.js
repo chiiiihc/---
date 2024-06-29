@@ -6,7 +6,6 @@ scrollElement.addEventListener("wheel", (e) => {
 
     const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
 
-
     if (
         (scrollElement.scrollLeft <= 0 && e.deltaY < 0) ||
         (scrollElement.scrollLeft >= maxScrollLeft && e.deltaY > 0)
