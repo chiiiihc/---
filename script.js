@@ -4,6 +4,8 @@ const scrollElement = document.querySelector("#scroll");
 scrollElement.addEventListener("wheel", (e) => {
     if (Math.abs(e.deltaY) < Math.abs(e.deltaX)) return;
 
+    const size = true
+
     const maxScrollLeft = scrollElement.scrollWidth - scrollElement.clientWidth;
 
     if (
